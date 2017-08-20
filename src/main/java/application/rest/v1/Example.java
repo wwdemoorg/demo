@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.logging.*;
 
 
-@Path("v1/example")
+@Path("hello")
 public class Example {
 
 
