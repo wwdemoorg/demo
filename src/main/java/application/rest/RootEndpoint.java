@@ -16,7 +16,8 @@ public class RootEndpoint {
     public Response listResources(@Context UriInfo uriInfo) {
       String healthURL = (uriInfo.getAbsolutePath() + "/health").replaceAll("(?<!http:)\\/\\/", "/");
       String helloURL = (uriInfo.getAbsolutePath() + "/hello").replaceAll("(?<!http:)\\/\\/", "/");
-      return Response.ok("{\"health\":\""+healthURL+"\",\"hello\":\""+helloURL+"\"}").build();
+      String byebyeURL = (uriInfo.getAbsolutePath() + "/byebye").replaceAll("(?<!http:)\\/\\/", "/");
+      return Response.ok("{\"health\":\""+healthURL+"\",\"hello\":\""+helloURL+"\",\"byebye\":\""+byebyeURL+"\"}").build();
     }
 
 }

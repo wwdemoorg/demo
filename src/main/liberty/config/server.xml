@@ -8,6 +8,12 @@
       <feature>logstashCollector-1.0</feature>
   </featureManager>
 
+  <logstashCollector 
+	source="message,trace,garbageCollection,ffdc,accessLog">
+
+    <tag>demoapp</tag>
+  </logstashCollector>
+
   <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
       id="defaultHttpEndpoint" host="*" />
 
